@@ -56,7 +56,7 @@ export const Camp = styled.div`
     }
   }
 
-  @media (max-width: 1411px) {
+  @media (max-width: 1585px) {
     flex-direction: column;
     margin-left:0px;
   }
