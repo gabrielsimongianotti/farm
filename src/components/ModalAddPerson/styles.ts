@@ -37,7 +37,7 @@ export const Div = styled.div`
     }
   }
   
-  @media (max-width: 1262px) {
+  @media (max-width: 1485px) {
     flex-direction: column;
     margin-left:0px;
   }
