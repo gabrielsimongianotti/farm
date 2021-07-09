@@ -47,7 +47,7 @@ const RuralProperty: React.FC = () => {
   };
 
   const handleEditorProperties = (data: Properties): void => {
-    console.log(data)
+    console.log(data);
     setProperties(
       propertys.map((property) =>
         property.id === data.id ? { ...data } : property
@@ -99,7 +99,7 @@ const RuralProperty: React.FC = () => {
                     <td>{property.areaProperty} ha</td>
                     <td>
                       <div>
-                        <FiEdit
+                        <span
                           onClick={() => {
                             setEditingPerson(property);
                             editorToggleModal();
@@ -107,15 +107,17 @@ const RuralProperty: React.FC = () => {
                           style={{
                             paddingRight: 2,
                           }}
-                          size={20}
-                        />
-                        <AiOutlineDelete
+                        >
+                          <FiEdit size={20} />
+                        </span>
+                        <span
                           onClick={() => {
                             handleDeleteProperties(property);
                           }}
-                          size={22}
                           style={{ paddingLeft: 2 }}
-                        />
+                        >
+                          <AiOutlineDelete size={22} />
+                        </span>
                       </div>
                     </td>
                   </tr>
