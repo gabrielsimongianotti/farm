@@ -11,7 +11,12 @@ interface Props extends SelectProps<OptionTypeBase> {
   options: { value: string; id: string; label: string }[];
 }
 
-export default function Select({ name, placeholder, ...rest }: Props) {
+export default function Select({
+  name,
+  placeholder,
+  isMulti = false,
+  ...rest
+}: Props) {
   const selectRef = useRef(null);
   const { fieldName, defaultValue, registerField, error } = useField(name);
 
@@ -42,7 +47,7 @@ export default function Select({ name, placeholder, ...rest }: Props) {
       name: fieldName,
       ref: selectRef.current,
       getValue: (ref: any) => {
-        if (rest?.isMulti) {
+        if (isMulti) {
           if (!ref.state.value) {
             return [];
           }
@@ -54,7 +59,7 @@ export default function Select({ name, placeholder, ...rest }: Props) {
         return ref.state.value.value;
       },
     });
-  }, [fieldName, registerField, rest?.isMulti]);
+  }, [fieldName, registerField, isMulti]);
 
   return (
     <Div>
