@@ -111,7 +111,7 @@ const ModalAddFood: React.FC<IModalProps> = ({
           <Input name="rg" placeholder="RG/Ie" />
         </Camp>
       
-        <Select
+        {/* <Select
           name="typePerson"
           placeholder="Tipo Pessoa"
           options={[
@@ -126,8 +126,8 @@ const ModalAddFood: React.FC<IModalProps> = ({
               label: "Pessoa Juridica",
             },
           ]}
-        />
-  <Input name="document" placeholder="Outro Documentos" />
+        /> */}
+        <Input name="document" placeholder="Outro Documentos" />
         <Input name="observation" placeholder="observações" />
         <Div>
           <button type="submit" data-testid="add-food-button">
