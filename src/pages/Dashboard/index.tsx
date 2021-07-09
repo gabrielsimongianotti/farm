@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { v4 as uuidv4  } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { FiEdit } from "react-icons/fi";
 import { AiOutlineDelete } from "react-icons/ai";
 
@@ -87,7 +87,7 @@ const Dashboard: React.FC = () => {
                     <td>{people.rg}</td>
                     <td>
                       <div>
-                        <FiEdit
+                        <span
                           onClick={() => {
                             setEditingPerson(people);
                             editorToggleModal();
@@ -95,15 +95,17 @@ const Dashboard: React.FC = () => {
                           style={{
                             paddingRight: 2,
                           }}
-                          size={20}
-                        />
-                        <AiOutlineDelete
+                        >
+                          <FiEdit size={20} />
+                        </span>
+                        <span
                           onClick={() => {
                             handleDeletePeople(people);
                           }}
-                          size={22}
                           style={{ paddingLeft: 2 }}
-                        />
+                        >
+                          <AiOutlineDelete size={22} />
+                        </span>
                       </div>
                     </td>
                   </tr>
