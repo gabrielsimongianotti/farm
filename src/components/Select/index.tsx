@@ -42,7 +42,7 @@ export default function Select({ name, placeholder, ...rest }: Props) {
       name: fieldName,
       ref: selectRef.current,
       getValue: (ref: any) => {
-        if (rest.isMulti) {
+        if (rest?.isMulti) {
           if (!ref.state.value) {
             return [];
           }
@@ -54,7 +54,7 @@ export default function Select({ name, placeholder, ...rest }: Props) {
         return ref.state.value.value;
       },
     });
-  }, [fieldName, registerField, rest.isMulti]);
+  }, [fieldName, registerField, rest?.isMulti]);
 
   return (
     <Div>
