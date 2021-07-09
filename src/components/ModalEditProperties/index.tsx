@@ -144,7 +144,7 @@ const ModalEditProperties: React.FC<IModalProps> = ({
 
         <Div>
           <button type="submit" data-testid="add-food-button">
-            <p className="text">Cadastras</p>
+            <p className="text">Atualizar</p>
           </button>
         </Div>
       </Form>
