@@ -9,6 +9,7 @@ interface Props extends SelectProps<OptionTypeBase> {
   name: string;
   placeholder: string;
   options: { value: string; id: string; label: string }[];
+  isMulti?: false | undefined;
 }
 
 export default function Select({
