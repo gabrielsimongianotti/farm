@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
+import { GiFarmTractor, GiFarmer } from "react-icons/gi";
 import { Container } from "./styles";
 
 import Logo from "../../assets/logo.png";
@@ -14,11 +14,15 @@ const Header: React.FC<HeaderProps> = ({ size = "large" }: HeaderProps) => (
   <Container size={size}>
     <header>
       <img src={Logo} alt="My Farm" />
-    
-    <nav>
-      <Link to="/">Pessoa</Link>
-      <Link to="/ruralProperty">Propriedade Rural</Link>
-    </nav>
+
+      <nav>
+        <Link to="/">
+          <GiFarmer size={30}/>
+        </Link>
+        <Link to="/ruralProperty">
+          <GiFarmTractor size={30}/>
+        </Link>
+      </nav>
     </header>
   </Container>
 );

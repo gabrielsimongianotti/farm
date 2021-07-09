@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import ReactModal from 'react-modal';
+import ReactModal from "react-modal";
 
 interface IModalProps {
   children: any;
@@ -11,6 +11,8 @@ interface IModalProps {
 const Modal: React.FC<IModalProps> = ({ children, isOpen, setIsOpen }) => {
   const [modalStatus, setModalStatus] = useState(isOpen);
 
+
+
   useEffect(() => {
     setModalStatus(isOpen);
   }, [isOpen]);
@@ -20,27 +22,27 @@ const Modal: React.FC<IModalProps> = ({ children, isOpen, setIsOpen }) => {
       shouldCloseOnOverlayClick={!false}
       onRequestClose={setIsOpen}
       isOpen={modalStatus}
-      ariaHideApp={false}
+      ariaHideApp={true}
       style={{
         content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '-50%',
-          transform: 'translate(-50%, -50%)',
-          background: '#FEEAC5',
-          color: '#65493D',
-          borderRadius: '8px',
-          width: 'calc(100vw - 710px)',
-          minWidth: '400px',
-          maxHeight: 'calc(100vh - 210px)',
-          overflowY: 'auto',
-          border: 'none',
-
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          transform: "translate(-50%, -50%)",
+          background: "#FEEAC5",
+          color: "#65493D",
+          borderRadius: "8px",
+          width: "calc(100vw - 710px)",
+          minWidth: "350px",
+          maxHeight: "calc(100vh - 210px)",
+          overflowY: "auto",
+          border: "none",
+          position: "fixed",
         },
         overlay: {
-          backgroundColor: '#121214e6',
+          backgroundColor: "#121214e6",
         },
       }}
     >
