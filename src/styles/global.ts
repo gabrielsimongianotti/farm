@@ -16,7 +16,9 @@ export default createGlobalStyle`
   body, input, button {
     font: 16px "Poppins", sans-serif;
   }
-
+  label{
+    font-size: 19px;
+  }
   button {
     cursor: pointer;
   }

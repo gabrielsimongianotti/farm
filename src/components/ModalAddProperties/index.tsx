@@ -84,11 +84,11 @@ const ModalAddProperties: React.FC<IModalProps> = ({
         onSubmit={handleSubmit}
       >
         <h1>Nova Propriedade Rural</h1>
-        <Camp>
+        <Camp style={{ marginRight: 25 }}>
           <Input name="produtorName" placeholder="nome do Produtor" disabled />
           <Input name="produtor" placeholder="Produtor" disabled />
         </Camp>
-        <Camp>
+        <Camp style={{ marginRight: 25 }}>
           <Input
             name="addDate"
             type="text"
@@ -114,7 +114,10 @@ const ModalAddProperties: React.FC<IModalProps> = ({
           />
           <Input name="active" placeholder="Ativo" disabled />
         </Camp>
+        <Camp>
         <Input name="nameProperty" placeholder="Nome proprietario" />
+        </Camp>
+
         <Camp>
           <Input name="uf" placeholder="UF" />
           <Input name="municipoice" placeholder="Municpio" />
@@ -131,7 +134,11 @@ const ModalAddProperties: React.FC<IModalProps> = ({
           <Input name="mediaHeight" placeholder="Altitude Media" />
           <Input name="expansion" placeholder="Expansão" />
         </Camp>
+        <Camp>
+
         <Input name="observation" placeholder="observações" />
+        </Camp>
+
         <Div>
           <button type="submit" data-testid="add-food-button">
             <p className="text">Cadastras</p>

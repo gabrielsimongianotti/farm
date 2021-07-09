@@ -43,22 +43,20 @@ export const Div = styled.div`
     margin-left:0px;
   }
 `;
-
 export const Camp = styled.div`
   display: flex;
   width: 100%;
-  flex-direction: row;
-  div {
+  flex-direction: row-reverse;
+   &+div {
     display: flex;
     width:100%;
-    margin: 0px 24px 24px 0px;
-
+    margin: 0px 0px 24px 0px;
     & + div {
-      margin: 0px 0px 24px 0px;
+      margin: 0px 24px 24px 0px;
     }
   }
 
-  @media (max-width: 1411px) {
+  @media (max-width: 1485px) {
     flex-direction: column;
     margin-left:0px;
   }

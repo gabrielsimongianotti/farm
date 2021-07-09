@@ -89,11 +89,11 @@ const ModalEditProperties: React.FC<IModalProps> = ({
       >
         {console.log("editingProperties.id", editingProperties.id)}
         <h1>Nova Propriedade Rural</h1>
-        <Camp>
-          <Input name="produtorName" placeholder="nome do Produtor" disabled/>
+        <Camp style={{ marginRight: 25 }}>
+          <Input name="produtorName" placeholder="nome do Produtor" disabled />
           <Input name="produtor" placeholder="Produtor" disabled />
         </Camp>
-        <Camp>
+        <Camp style={{ marginRight: 25 }}>
           <Input
             name="addDate"
             type="text"
@@ -104,7 +104,7 @@ const ModalEditProperties: React.FC<IModalProps> = ({
             placeholder="Dt Cadastro"
             disabled
           />
-          <Input name="propriedade" placeholder="Propriedade" disabled/>
+          <Input name="propriedade" placeholder="Propriedade" disabled />
         </Camp>
         <Camp>
           <Input
@@ -117,9 +117,11 @@ const ModalEditProperties: React.FC<IModalProps> = ({
             placeholder="Dt Ult Manitenção"
             disabled
           />
-          <Input name="active" placeholder="Ativo" disabled/>
+          <Input name="active" placeholder="Ativo" disabled />
         </Camp>
-        <Input name="nameProperty" placeholder="Nome proprietario" />
+        <Camp>
+          <Input name="nameProperty" placeholder="Nome proprietario" />
+        </Camp>
         <Camp>
           <Input name="uf" placeholder="UF" />
           <Input name="municipoice" placeholder="Municpio" />
@@ -136,7 +138,10 @@ const ModalEditProperties: React.FC<IModalProps> = ({
           <Input name="mediaHeight" placeholder="Altitude Media" />
           <Input name="expansion" placeholder="Expansão" />
         </Camp>
-        <Input name="observation" placeholder="observações" />
+        <Camp>
+          <Input name="observation" placeholder="observações" />
+        </Camp>
+
         <Div>
           <button type="submit" data-testid="add-food-button">
             <p className="text">Cadastras</p>

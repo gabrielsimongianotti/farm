@@ -7,7 +7,8 @@ export const Form = styled(Unform)`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  
+
+ 
   h1 {
     font-weight: 600;
     font-size: 36px;
@@ -34,9 +35,6 @@ export const Div = styled.div`
       padding: 16px 24px;
     
     }
-    @media (max-width: 1262px) {
-      flex: 1;   
-    }
   }
   
   @media (max-width: 1262px) {
@@ -48,14 +46,13 @@ export const Div = styled.div`
 export const Camp = styled.div`
   display: flex;
   width: 100%;
-  flex-direction: row;
-  div {
+
+  & + div {
     display: flex;
     width:100%;
-    margin: 0px 24px 24px 0px;
-
+    margin: 0px 0px 24px 0px;
     & + div {
-      margin: 0px 0px 24px 0px;
+      margin: 0px 24px 24px 0px;
     }
   }
 

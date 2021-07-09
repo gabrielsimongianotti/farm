@@ -65,3 +65,12 @@ export const SelectReact = styled(ReactSelect)`
     margin-top: 24px;
   }
 `;
+
+export const Div = styled.div`
+  padding: 18px 24px;
+  width: 100%;
+
+  lable{
+    margin: 10px;
+  }
+`

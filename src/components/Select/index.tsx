@@ -2,16 +2,16 @@ import React, { useRef, useEffect } from "react";
 
 import { OptionTypeBase, Props as SelectProps } from "react-select";
 
-import { SelectReact } from "./styles";
+import { SelectReact, Div } from "./styles";
 import { useField } from "@unform/core";
 
 interface Props extends SelectProps<OptionTypeBase> {
   name: string;
   placeholder: string;
-  options:{value:string, id:string, label:string}[]
+  options: { value: string; id: string; label: string }[];
 }
 
-export default function Select({ name, ...rest }: Props) {
+export default function Select({ name, placeholder, ...rest }: Props) {
   const selectRef = useRef(null);
   const { fieldName, defaultValue, registerField, error } = useField(name);
 
@@ -27,7 +27,7 @@ export default function Select({ name, ...rest }: Props) {
       padding: 11,
       color: "#65493D",
       display: "flex",
-      width: "100%",
+      width: "80%",
       background: "#ECCE9C",
       borderRadius: 8,
       borderLeft: !!error ? "5px solid #c53030 " : "5px solid #ECCE9C",
@@ -57,14 +57,17 @@ export default function Select({ name, ...rest }: Props) {
   }, [fieldName, registerField, rest.isMulti]);
 
   return (
-    <SelectReact
-      styles={customStyles}
-      defaultValue={rest.options?.filter(
-        (option) => option.value === defaultValue
-      )}
-      ref={selectRef}
-      classNamePrefix="react-select"
-      {...rest}
-    />
+    <Div>
+      <label>{placeholder}</label>
+      <SelectReact
+        styles={customStyles}
+        defaultValue={rest.options?.filter(
+          (option) => option.value === defaultValue
+        )}
+        ref={selectRef}
+        classNamePrefix="react-select"
+        {...rest}
+      />
+    </Div>
   );
 }

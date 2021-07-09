@@ -77,7 +77,7 @@ const ModalAddFood: React.FC<IModalProps> = ({
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <Form ref={formRef} initialData={editingPerson} onSubmit={handleSubmit}>
         <h1>Novo Produtor Rural</h1>
-        <Camp>
+        <Camp style={{ marginRight: 25 }}>
           <Input name="code" placeholder="Codigo" />
           <Input
             name="addDate"
@@ -89,7 +89,8 @@ const ModalAddFood: React.FC<IModalProps> = ({
             placeholder="Dt Cadastro"
           />
         </Camp>
-        <Camp>
+        <Camp style={{ marginRight: 25 }}>
+          <Input name="name" placeholder="Nome/Razão social" />
           <Input
             name="dataUlt"
             type="text"
@@ -99,31 +100,35 @@ const ModalAddFood: React.FC<IModalProps> = ({
             }}
             placeholder="Dt Ult Manitenção"
           />
-          <Input name="name" placeholder="Nome/Razão social" />
         </Camp>
-        <Camp>
+        <Camp style={{ marginTop: -25 }}>
           <Input name="cpfCnpj" placeholder="CPF/CNPJ" />
           <Input name="rg" placeholder="RG/Ie" />
         </Camp>
+        <Camp style={{ marginTop: -25 }}>
+          <Select
+            name="typePerson"
+            placeholder="Tipo Pessoa"
+            options={[
+              {
+                id: "fisicaPessoa",
+                value: "fisicaPessoa",
+                label: "Pessoa Fisica",
+              },
+              {
+                id: "juridicaPessoa",
+                value: "juridicaPessoa",
+                label: "Pessoa Juridica",
+              },
+            ]}
+          />
 
-        <Select
-          name="typePerson"
-          placeholder="Tipo Pessoa"
-          options={[
-            {
-              id: "fisicaPessoa",
-              value: "fisicaPessoa",
-              label: "Pessoa Fisica",
-            },
-            {
-              id: "juridicaPessoa",
-              value: "juridicaPessoa",
-              label: "Pessoa Juridica",
-            },
-          ]}
-        />
-        <Input name="document" placeholder="Outro Documentos" />
-        <Input name="observation" placeholder="observações" />
+          <Input name="document" placeholder="Outro Documentos" />
+        </Camp>
+        <Camp style={{ marginTop: -25 }}>
+          <Input name="observation" placeholder="Observações" />
+        </Camp>
+
         <Div>
           <div />
           <button type="submit" data-testid="add-food-button">

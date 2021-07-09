@@ -41,7 +41,7 @@ export const Container = styled.div<IContainerProps>`
     background: transparent;
     border: 0;
     color: #65493D;
-
+    font-size: 18px;
     &::placeholder {
       color: #65493D;
     }
@@ -51,3 +51,9 @@ export const Container = styled.div<IContainerProps>`
     margin-right: 16px;
   }
 `;
+
+export const Div = styled.div`
+  padding: 18px 24px;
+  width: 100%;
+
+`

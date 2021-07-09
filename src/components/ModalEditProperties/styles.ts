@@ -47,7 +47,7 @@ export const Camp = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row-reverse;
-  div {
+   &+div {
     display: flex;
     width:100%;
     margin: 0px 0px 24px 0px;
@@ -56,7 +56,7 @@ export const Camp = styled.div`
     }
   }
 
-  @media (max-width: 1411px) {
+  @media (max-width: 1485px) {
     flex-direction: column;
     margin-left:0px;
   }
