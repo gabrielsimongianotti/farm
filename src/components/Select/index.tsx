@@ -7,6 +7,7 @@ import { useField } from "@unform/core";
 
 interface Props extends SelectProps<OptionTypeBase> {
   name: string;
+  placeholder: string;
 }
 
 export default function Select({ name, ...rest }: Props) {
